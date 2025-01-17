@@ -79,3 +79,5 @@ if __name__ == "__main__":
             if lcia_name not in df.columns:
                 df[lcia_name] = None
             df.at[index, lcia_name] = value
+    df.to_csv('your_path')
+    
