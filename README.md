@@ -26,8 +26,8 @@ Preparation to run the code:
 
 Running the code:
 1. run main.py
-   a) first, run() will be runned, which will fill data gaps and prepare the necessary files to later run WindTrace. The decision tree that the code internally uses to do that is shown in turbine_matching.md
-   b) second, WindTrace will create an inventory for each European wind park and will calculate its material demands and environmental impacts.
-   c) third, everything will be stored in a dataframe, which will be saved to a csv to the route that you have previously specified.
+   - first, run() will be runned, which will fill data gaps and prepare the necessary files to later run WindTrace. The decision tree that the code internally uses to do that is shown in turbine_matching.md
+   - second, WindTrace will create an inventory for each European wind park and will calculate its material demands and environmental impacts.
+   - third, everything will be stored in a dataframe, which will be saved to a csv to the route that you have previously specified.
 
 For any inquiries contact: Miquel Sierra-Montoya (miquel.sierra@uab.cat) or Cristina Madrid-López (cristina.madrid@uab.cat)
