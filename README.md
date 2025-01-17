@@ -23,9 +23,10 @@ Preparation to run the code:
    - The Wind Power technical database (csv). Change line 11 in const.py and use the same file name there.
 3. In main.py:
    - In line 82, insert the path where you would like the dataframe to be saved.
+
 Running the code:
 1. run main.py
-   a) first, run() will be runned, which will fill data gaps and prepare the necessary files to later run WindTrace.
+   a) first, run() will be runned, which will fill data gaps and prepare the necessary files to later run WindTrace. The decision tree that the code internally uses to do that is shown in turbine_matching.md
    b) second, WindTrace will create an inventory for each European wind park and will calculate its material demands and environmental impacts.
    c) third, everything will be stored in a dataframe, which will be saved to a csv to the route that you have previously specified.
 
