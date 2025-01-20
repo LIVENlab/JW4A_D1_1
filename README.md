@@ -13,7 +13,7 @@ Data requirements before running the code:
 - The Wind Power technical database (csv)
 - Ecoinvent license
 
-Before WindTrace is used, the code will fill data gaps in The Wind Power Database.
+Before WindTrace is used, the code will fill data gaps in The Wind Power Database (more details below).
 
 Preparation to run the code:
 1. In consts_wt.py change the following:
