@@ -32,4 +32,10 @@ Running the code:
    - second, WindTrace will create an inventory for each European wind park and will calculate its material demands and environmental impacts.
    - third, everything will be stored in a dataframe, which will be saved to a csv to the route that you have previously specified.
 
-For any inquiries contact: Miquel Sierra-Montoya (miquel.sierra@uab.cat) or Cristina Madrid-López (cristina.madrid@uab.cat)
+Additionally, you can run turbine_examples.py to generate offshore turbine examples, which are also included in the database. These turbines are based on the following turbines and settings:
+- Siemens Gamesa SWT-6.0-154 (Rampion Offshore Wind Farm (UK))
+- Vestas V164-8.0 MW (Burbo Bank Offshore (extension))
+- Vestas V164-10.0 (Seagreen Offshore (Scotland))
+- Vesats V236-15.0 (-)
+
+For any enquiries contact: Miquel Sierra-Montoya (miquel.sierra@uab.cat) or Cristina Madrid-López (cristina.madrid@uab.cat)
