@@ -16,7 +16,7 @@ graph TD
     WPHasTurbine? -- no --> PowerMatch?[Manufacturer has turbines with same power?]
     PowerMatch? -- " yes " --> OneMostCommon?
     PowerMatch? -- no --> CLOSEST[Find manufacturers turbine with the most similar power]
-    CLOSEST --> OneMostCommon?[For the given manufacturer-power combination\n one turbine is used most often in the given windpark dataset?]
+    CLOSEST --> OneMostCommon?[For the given manufacturer-power combination one turbine is used most often in the given windpark dataset?]
     OneMostCommon? -- " yes " --> MATCH
     OneMostCommon? -- no --> RND[Random turbine from candidates]
     ManTurbinePairExists? -- " yes " --> MATCH
