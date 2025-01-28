@@ -2,15 +2,15 @@
 
 ```mermaid
 graph TD
-    HasHubHeight[Widpark has hub height?]
-    HasHubHeight -- yes --> HasMan
-    HasHubHeight -- no --> fit_curve[Hub height fitting curve]
     HasParPower[Windpark has park power?]
     HasParPower -- yes --> HasMan
     HasParPower -- no --> EXCLUDE[Exclude this wind farm]
+    HasHubHeight[Widpark has hub height?]
+    HasHubHeight -- yes --> HasMan
+    HasHubHeight -- no --> fit_curve[Hub height fitting curve]
     HasMan[Windpark has Manufacturer?]
     HasMan -- yes --> ManExists
-    HasMan -- " no " --> MAN_FIT_CURVE[No turbine: Rotor diameter from fitting curves. Default generator gb_dfig]
+    HasMan -- " no " --> MAN_FIT_CURVE[No turbine: Rotor diameter from fitting curve. Default generator gb_dfig]
     ManExists(Manufacturer exists?)
     ManExists -- yes --> WPHasTurbine?
     ManExists -- " no " --> MAN_FIT_CURVE
