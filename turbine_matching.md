@@ -2,31 +2,12 @@
 
 ```mermaid
 graph TD
+    HasParPower[Windpark has park power?]
+    HasParPower -- yes --> HasMan
+    HasParPower -- no --> EXCLUDE[Exclude this wind farm]
     HasMan[Windpark has Manufacturer?]
     HasMan -- yes --> ManExists
-    HasMan -- " no (x2) " --> MAN_FIT_CURVE[Generator type and rotor diameter from fitting curves]
-    ManExists(Manufacturer exists?)
-    ManExists -- yes --> WPHasTurbine?
-    ManExists -- " no (x3) " --> MAN_FIT_CURVE
-    WPHasTurbine?[Windpark has turbine?]
-    WPHasTurbine? -- yes --> ManTurbinePairExists?
-    WPHasTurbine? -- no --> PowerMatch?
-    PowerMatch? -- " yes (b) " --> OneMostCommon?
-    PowerMatch? -- no --> CLOSEST[Find closest power]
-    CLOSEST -- " (c) " --> OneMostCommon?
-    OneMostCommon? -- " yes " --> MATCH
-    OneMostCommon? -- no --> RND[Random turbine from candidates]
-    ManTurbinePairExists? -- " yes (d) " --> MATCH
-    ManTurbinePairExists? -- no --> PowerMatch?
-```
-
-clean
-
-```mermaid
-graph TD
-    HasMan[Windpark has Manufacturer?]
-    HasMan -- yes --> ManExists
-    HasMan -- " no " --> MAN_FIT_CURVE[No Turbine: Generator type and \nrotor diameter from fitting curves]
+    HasMan -- " no " --> MAN_FIT_CURVE[No Turbine: Rotor diameter from fitting curves]
     ManExists(Manufacturer exists?)
     ManExists -- yes --> WPHasTurbine?
     ManExists -- " no " --> MAN_FIT_CURVE
