@@ -17,18 +17,18 @@ Before WindTrace is used, the code will fill data gaps in The Wind Power Databas
 
 Preparation to run the code:
 1. In consts_wt.py change the following:
-   - PROJECT_NAME (name of a new project that will be created in Brightway2)
-   - SPOLD_FILES (local route to the cutoff Ecoinvent v3.9.1. Important: other versions are not supported)
-   - NEW_DB_NAME (name of the database where the new turbine inventories will be created)
+   - `PROJECT_NAME` (name of a new project that will be created in Brightway2)
+   - `SPOLD_FILES` (local route to the cutoff Ecoinvent v3.9.1. Important: other versions are not supported)
+   - `NEW_DB_NAME` (name of the database where the new turbine inventories will be created)
 2. Save the following in the folder data -> 0_base:
    - The Wind Power database (csv). Change line 13 in const.py and use the same file name there.
    - The Wind Power technical database (csv). Change line 11 in const.py and use the same file name there.
-3. In main.py:
+3. In `main.py`:
    - In line 82, insert the path where you would like the dataframe to be saved.
 
 Running the code:
-1. run main.py
-   - first, run() will be runned, which will fill data gaps and prepare the necessary files to later run WindTrace. The decision tree that the code internally uses to do that is shown in turbine_matching.md
+1. run `main.py`
+   - first, `run()` will be runned, which will fill data gaps and prepare the necessary files to later run WindTrace. The decision tree that the code internally uses to do that is shown in turbine_matching.md
    - second, WindTrace will create an inventory for each European wind park and will calculate its material demands and environmental impacts.
    - third, everything will be stored in a dataframe, which will be saved to a csv to the route that you have previously specified.
 
